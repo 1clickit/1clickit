@@ -4,6 +4,22 @@ This is the canonical high-level operating policy for Codex/AI work across the `
 
 Every repository should point here first, then apply its own project-specific rules. Cross-project philosophy belongs here so it can be changed once instead of duplicated across repositories.
 
+## Mandatory bootstrap for every new project
+
+Every new `1clickit` project/repository must adopt this policy before substantive design, implementation, deployment, or operational work begins.
+
+A new project is not considered fully initialized until it has:
+
+1. A root `AGENTS.md` that tells Codex/AI to read this canonical `README-FIRST.md` first, then the repository's project-specific documentation.
+2. A durable place to record current state, next work, and deferred ideas/decisions. Small projects may combine these in one concise planning document; larger projects may use separate state/task/roadmap files.
+3. The requirement that useful agreed ideas, architecture directions, operational lessons, and constraints are written into repository documentation promptly rather than existing only in chat.
+4. Clear status labels where useful, such as proposed, approved/planned, implemented, deployed, or superseded, so future intent is not confused with current behavior.
+5. Project-specific rules only where needed; common cross-project policy should point here rather than being copied into each repository.
+
+If a newly created project is missing this bootstrap, the first repository-maintenance action should be to add it before substantive work continues.
+
+The reusable bootstrap text and checklist live in `NEW-PROJECT-BOOTSTRAP.md` in this repository.
+
 ## Environment classification
 
 These projects are for a private home-lab / home-network environment. The security target is roughly comparable to a well-run Home Assistant installation: sensible least privilege, protected credentials, no unnecessary Internet exposure, practical backups, and straightforward recovery.
