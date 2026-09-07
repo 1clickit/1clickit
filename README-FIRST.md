@@ -2,19 +2,23 @@
 
 This is the canonical high-level operating policy for Codex/AI work across the `1clickit` repositories.
 
-Every repository should point here first, then apply its own project-specific rules. Cross-project philosophy belongs here so it can be changed once instead of duplicated across repositories.
+Every repository must point here first, then apply its own project-specific rules. Cross-project philosophy belongs here so it can be changed once instead of duplicated across repositories.
 
 ## Mandatory bootstrap for every new project
 
 Every new `1clickit` project/repository must adopt this policy before substantive design, implementation, deployment, or operational work begins.
 
+**The first instruction for every new project is to read this canonical `README-FIRST.md` before any project-local README, task file, state file, roadmap, or implementation instructions.** Project-specific documentation may supplement or tighten this policy where genuinely required, but it may not omit, bypass, or replace the requirement to read this document first.
+
 A new project is not considered fully initialized until it has:
 
-1. A root `AGENTS.md` that tells Codex/AI to read this canonical `README-FIRST.md` first, then the repository's project-specific documentation.
+1. A root `AGENTS.md` that explicitly tells Codex/AI to read this canonical `README-FIRST.md` **first, before doing substantive work**, then read the repository's project-specific documentation.
 2. A durable place to record current state, next work, and deferred ideas/decisions. Small projects may combine these in one concise planning document; larger projects may use separate state/task/roadmap files.
 3. The requirement that useful agreed ideas, architecture directions, operational lessons, and constraints are written into repository documentation promptly rather than existing only in chat.
 4. Clear status labels where useful, such as proposed, approved/planned, implemented, deployed, or superseded, so future intent is not confused with current behavior.
 5. Project-specific rules only where needed; common cross-project policy should point here rather than being copied into each repository.
+
+If the canonical document cannot be read, substantive write/deploy work should stop until it is available. Read-only inspection needed to diagnose the access problem is fine.
 
 If a newly created project is missing this bootstrap, the first repository-maintenance action should be to add it before substantive work continues.
 
