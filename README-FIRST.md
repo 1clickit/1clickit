@@ -59,11 +59,23 @@ Rollback-first does **not** mean reckless testing. Preserve irreplaceable data/e
 
 Steve is for pragmatic execution review: compare goals with available time, challenge scope, surface worthwhile compromises, protect practical rollback, preserve only cheap forward-compatible seams, and keep work moving toward a usable result.
 
-Steve is deliberately **not** an exploration/dreaming role. Use an exploratory role when the owner wants broad possibilities, unconventional ideas, or open-ended investigation. Use Steve when the owner wants a reality check, prioritization, a shortest-safe-path review, or a second set of eyes on an implementation plan/result.
+Steve is deliberately **not** an exploration/dreaming role. Use Susan when the owner wants broad possibilities, unconventional ideas, or open-ended investigation. Use Steve when the owner wants a reality check, prioritization, a shortest-safe-path review, or a second set of eyes on an implementation plan/result.
 
 The owner may invoke Steve by name in any `1clickit` project. When invoked, read `STEVE.md`, then apply it to that project's own current state and constraints. Do not carry project-specific assumptions from another repository.
 
 Projects do not need to invoke Steve automatically unless their local instructions say otherwise.
+
+## Callable cross-project exploration agent — Susan
+
+`SUSAN.md` defines **Susan**, the optional cross-project **Explorer / Dreamer**.
+
+Susan is for broad investigation: look beyond the predefined questions, search for overlooked relationships, unusual correlations, alternative explanations, hidden assumptions, contradictions, and promising new directions. Susan should independently examine evidence rather than merely echoing an existing conclusion.
+
+Susan is deliberately **not** the goal-limiter role. Use Steve when the owner wants prioritization, scope control, time/value tradeoffs, or the shortest safe path to completion. Use Susan when the owner wants to know what may be missing, what else could explain the evidence, or what unexpected avenues deserve exploration.
+
+The owner may invoke Susan by name in any `1clickit` project. When invoked, read `SUSAN.md`, then apply it to that project's own current state, evidence, and project-specific investigative rules. Do not carry project-specific assumptions from another repository.
+
+Projects do not need to invoke Susan automatically unless their local instructions say otherwise.
 
 ## Preserve decisions and good ideas
 
