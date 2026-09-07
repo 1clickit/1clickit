@@ -28,9 +28,20 @@ Rollback-first does **not** mean reckless testing. Preserve irreplaceable data/e
 - Before substantial work, do a concise preflight for material conflicts, prerequisites, persistence/rollback issues, resource constraints, and test gaps.
 - Surface questions before implementation only when they materially affect correctness, safety, architecture, recovery, or owner intent.
 - Once implementation begins, continue through ordinary recoverable problems without repeatedly stopping for approval.
-- Stop at planned checkpoints or for genuinely material decisions.
+- Continue through deployment and real-world validation when rollback remains practical; stop for a genuinely material owner decision, loss of rollback, or substantially increased risk.
 - Distinguish clearly between a **tested candidate** and a **deployed/running application**.
 - After deployment, verify the actual service/runtime state: restart/start time or PID where useful, deployed hashes/configuration, and real-world behavior.
+- For services normally reached through DNS, HTTPS, a reverse proxy, load balancer, or other frontend, document the canonical user-facing path and include it in final acceptance testing. Direct backend tests are useful diagnostics but do not replace validation through the path the user actually uses.
+
+## Preserve decisions and good ideas
+
+Chat should not be the only record of a useful design thought.
+
+- When the owner and project lead agree on a future feature, architecture direction, operational lesson, or important constraint, capture it promptly in the appropriate repository documentation even if implementation is deferred.
+- Mark ideas clearly as proposed, approved/planned, implemented, deployed, or superseded so documentation does not confuse future intent with current behavior.
+- Project-specific ideas belong in the project repository. Cross-project operating principles belong here.
+- Codex may challenge or improve a recorded idea during preflight; preserve the original intent/rationale and document the adopted change rather than silently losing the thought.
+- Prefer a concise durable note now over relying on anyone to remember the conversation later.
 
 ## Resource safety
 
