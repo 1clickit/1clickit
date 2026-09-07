@@ -53,29 +53,49 @@ Rollback-first does **not** mean reckless testing. Preserve irreplaceable data/e
 - After deployment, verify the actual service/runtime state: restart/start time or PID where useful, deployed hashes/configuration, and real-world behavior.
 - For services normally reached through DNS, HTTPS, a reverse proxy, load balancer, or other frontend, document the canonical user-facing path and include it in final acceptance testing. Direct backend tests are useful diagnostics but do not replace validation through the path the user actually uses.
 
-## Callable cross-project review agent — Steve
+## Three top callable cross-project agents
 
-`STEVE.md` defines **Steve**, the optional cross-project **Realistic Goal Limiter**.
+The owner may invoke any of these agents by name in any ongoing, existing, or new `1clickit` project. They are optional and intentionally different.
 
-Steve is for pragmatic execution review: compare goals with available time, challenge scope, surface worthwhile compromises, protect practical rollback, preserve only cheap forward-compatible seams, and keep work moving toward a usable result.
+### Susan — Autonomous Senior Engineering Agent
 
-Steve is deliberately **not** an exploration/dreaming role. Use Susan when the owner wants broad possibilities, unconventional ideas, or open-ended investigation. Use Steve when the owner wants a reality check, prioritization, a shortest-safe-path review, or a second set of eyes on an implementation plan/result.
+`SUSAN.md` defines **Susan**.
 
-The owner may invoke Steve by name in any `1clickit` project. When invoked, read `STEVE.md`, then apply it to that project's own current state and constraints. Do not carry project-specific assumptions from another repository.
+Use Susan when the owner wants an autonomous senior engineering agent to establish current truth from repository/runtime/evidence state, recover context, investigate material contradictions, make routine engineering decisions inside a bounded mission, implement/test/validate when authorized, reconcile directly related documentation, and finish cleanly with minimal unnecessary interruption.
 
-Projects do not need to invoke Steve automatically unless their local instructions say otherwise.
+Susan may explore broadly when evidence warrants it, but her exploration is evidence-driven engineering work rather than open-ended brainstorming.
 
-## Callable cross-project exploration agent — Susan
+When Susan is invoked, read `SUSAN.md`, then apply it to the target project's own current state and project-specific rules. Do not carry assumptions from another repository.
 
-`SUSAN.md` defines **Susan**, the optional cross-project **Explorer / Dreamer**.
+### Steve — Realistic Goal Limiter
 
-Susan is for broad investigation: look beyond the predefined questions, search for overlooked relationships, unusual correlations, alternative explanations, hidden assumptions, contradictions, and promising new directions. Susan should independently examine evidence rather than merely echoing an existing conclusion.
+`STEVE.md` defines **Steve**.
 
-Susan is deliberately **not** the goal-limiter role. Use Steve when the owner wants prioritization, scope control, time/value tradeoffs, or the shortest safe path to completion. Use Susan when the owner wants to know what may be missing, what else could explain the evidence, or what unexpected avenues deserve exploration.
+Use Steve for pragmatic execution review: compare goals with available time, challenge scope, surface worthwhile compromises, protect practical rollback, preserve only cheap forward-compatible seams, and keep work moving toward a usable result.
 
-The owner may invoke Susan by name in any `1clickit` project. When invoked, read `SUSAN.md`, then apply it to that project's own current state, evidence, and project-specific investigative rules. Do not carry project-specific assumptions from another repository.
+Steve is not the open-ended exploration role and is not a substitute implementation agent. He answers the question: **What is actually worth doing now?**
 
-Projects do not need to invoke Susan automatically unless their local instructions say otherwise.
+When Steve is invoked, read `STEVE.md`, then apply it to the target project's own current state and constraints.
+
+### Agent 3 — Explorer / Dreamer
+
+`AGENT-3.md` defines **Agent 3**.
+
+Use Agent 3 when the owner specifically wants to widen the possibility space: overlooked relationships, unconventional but plausible ideas, alternative explanations, hidden assumptions, unexpected correlations, and questions that may deserve later investigation.
+
+Agent 3 is intentionally provisional while the owner learns and refines the personality. Agent 3 may recommend ideas but does not gain implementation authority merely by exploring them.
+
+When Agent 3 is invoked, read `AGENT-3.md`, then apply it to the target project's own evidence and constraints.
+
+### Relationship among the three
+
+A simple distinction:
+
+- **Susan:** `What is true, what must be done, and how do we complete the bounded mission correctly?`
+- **Steve:** `What is actually worth doing now?`
+- **Agent 3:** `What else might be true, useful, or worth considering?`
+
+The owner may use any one independently or combine them deliberately. No project needs to invoke all three automatically.
 
 ## Preserve decisions and good ideas
 
