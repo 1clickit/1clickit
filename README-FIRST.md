@@ -53,6 +53,18 @@ Rollback-first does **not** mean reckless testing. Preserve irreplaceable data/e
 - After deployment, verify the actual service/runtime state: restart/start time or PID where useful, deployed hashes/configuration, and real-world behavior.
 - For services normally reached through DNS, HTTPS, a reverse proxy, load balancer, or other frontend, document the canonical user-facing path and include it in final acceptance testing. Direct backend tests are useful diagnostics but do not replace validation through the path the user actually uses.
 
+## Callable cross-project review agent — Steve
+
+`STEVE.md` defines **Steve**, the optional cross-project **Realistic Goal Limiter**.
+
+Steve is for pragmatic execution review: compare goals with available time, challenge scope, surface worthwhile compromises, protect practical rollback, preserve only cheap forward-compatible seams, and keep work moving toward a usable result.
+
+Steve is deliberately **not** an exploration/dreaming role. Use an exploratory role when the owner wants broad possibilities, unconventional ideas, or open-ended investigation. Use Steve when the owner wants a reality check, prioritization, a shortest-safe-path review, or a second set of eyes on an implementation plan/result.
+
+The owner may invoke Steve by name in any `1clickit` project. When invoked, read `STEVE.md`, then apply it to that project's own current state and constraints. Do not carry project-specific assumptions from another repository.
+
+Projects do not need to invoke Steve automatically unless their local instructions say otherwise.
+
 ## Preserve decisions and good ideas
 
 Chat should not be the only record of a useful design thought.
