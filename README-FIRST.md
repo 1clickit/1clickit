@@ -123,6 +123,12 @@ Use project/host-specific thresholds rather than blindly applying one machine's 
 
 ## Infrastructure baseline before changes
 
+Project repositories may and should keep useful project-relevant operational facts such as hostnames, IP addresses, MAC addresses, VM/CT IDs, ports, mounts, hardware identity, service paths, and topology. These records are valuable working documentation, but they are **not immutable truth**.
+
+**Before acting on infrastructure, verify that the current runtime target is actually the documented target rather than assuming an old hostname, IP address, guest ID, or hardware label is still correct.** Use evidence appropriate to the risk and system, such as hostname, current interface/IP/MAC data, ARP/neighbor correlation, DMI/SMBIOS hardware identity, Proxmox `qm`/`pct` inventory, service state, mounts, or other independent runtime evidence.
+
+Never choose a write/destructive target solely because an old README, handoff, chat, or remembered address says it is the right machine. If documentation and runtime evidence disagree, preserve the discrepancy, resolve it with independent evidence where practical, and avoid consequential changes until identity is sufficiently established. Read-only inspection may continue when it helps resolve the discrepancy safely.
+
 Before changing a CT, VM, server, appliance, or important service, verify and record applicable facts rather than inferring them:
 
 - physical/Proxmox host and hardware platform;
