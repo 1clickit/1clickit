@@ -167,6 +167,25 @@ Public keys are not secret, but avoid publishing them unnecessarily together wit
 
 Do not weaken authentication, firewalling, or isolation merely for convenience unless the change is explicitly justified and reversible.
 
+### Mandatory credential access method — all projects
+
+**Owner-provisioned credentials with restricted service access is the only permitted method for Codex/AI-directed access to password-protected hardware and software across all projects.** This governs agent-directed access, not the owner's personal interactive login.
+
+The Linux operation is called **secure local credential provisioning**. Use this workflow:
+
+1. **Owner provisions locally.** The owner runs a reviewed installer in a terminal they directly control and enters the credential through a hidden prompt, such as Python `getpass`. Never request secret entry in a ChatGPT/Codex conversation or tool-call input. Abort if hidden terminal input is unavailable.
+2. **Store behind an enforced access boundary.** Install the credential outside repositories into a protected local credential file or equivalent service credential store. Ownership and permissions must restrict retrieval to the specifically authorized consumer. A file readable by the agent's ordinary account is not sufficient separation.
+3. **Return a non-secret receipt.** Verify installation using metadata and access-boundary checks only. The owner may return that confirmation to ChatGPT/Codex. Do not return the password, a password hash, encrypted credential payload, or session secret.
+4. **Authorize use separately.** Provisioning is not permission to authenticate. The owner must approve the target, account, permitted operations, and access window before the consumer uses the credential.
+5. **Use only the restricted consumer.** Codex may direct the approved service/helper to perform the authorized operations and receive sanitized results; it must not directly read, print, copy, export, or repurpose the credential. Consumer code and invocation must not provide an agent-controlled route to retrieve secrets or perform arbitrary privileged actions.
+6. **End access deliberately.** Log out and clear temporary session material when applicable. The owner controls account enablement, expiration, and revocation. Retain or remove the provisioned credential according to the approved lifecycle; do not silently create indefinite access.
+
+Never place credential values in chat, source code, Git, documentation, command-line arguments, shell history, ordinary environment variables, logs, or evidence reports. Do not weaken file permissions, expand privileges, substitute an owner/root account, or reuse unrelated credentials to get around this workflow.
+
+If the reviewed provisioning/consumer mechanism is missing or cannot enforce the boundary, stop authenticated work, explain the specific gap, and obtain owner direction. Unauthenticated read-only inspection may continue within the task's scope.
+
+**Terminology matters:** protected credential storage is not automatically encryption, and a password hash is not a login credential. Document the actual mechanism without claiming either protection unless implemented and verified.
+
 ## Repository and publication policy
 
 Working repositories are private by default while operational/infrastructure-specific development is active.
